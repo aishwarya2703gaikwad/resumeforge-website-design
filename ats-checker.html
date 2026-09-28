@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATS Resume Checker | ResumeForge</title>
+
+    <link rel="stylesheet" href="ats-checker.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">R</span>
+            <span>ResumeForge</span>
+        </a>
+
+        <a href="index.html" class="back-btn">
+            ← Back to ResumeForge
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <div class="page-heading">
+
+            <span class="badge">
+                ATS RESUME CHECKER
+            </span>
+
+            <h1>
+                Check how
+                <span>resume-ready</span>
+                your profile is.
+            </h1>
+
+            <p>
+                Paste your resume and the job description below.
+                ResumeForge will analyze important sections,
+                keywords and resume structure.
+            </p>
+
+        </div>
+
+
+        <!-- INPUT AREA -->
+
+        <section class="checker-card">
+
+            <div class="input-grid">
+
+                <!-- RESUME -->
+
+                <div class="input-box">
+
+                    <div class="input-header">
+
+                        <div>
+                            <h2>Your Resume</h2>
+                            <p>Paste your resume text here</p>
+                        </div>
+
+                        <span id="resumeCount">
+                            0 words
+                        </span>
+
+                    </div>
+
+                    <textarea
+                        id="resumeText"
+                        placeholder="Paste your resume content here...
+
+Example:
+
+John Doe
+john@email.com
++91 9876543210
+
+Professional Summary
+Java developer with experience in web development...
+
+Skills
+Java, JavaScript, React, MySQL...
+
+Education
+B.Sc Computer Science..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- JOB DESCRIPTION -->
+
+                <div class="input-box">
+
+                    <div class="input-header">
+
+                        <div>
+                            <h2>Job Description</h2>
+                            <p>Paste the target job description</p>
+                        </div>
+
+                        <span id="jdCount">
+                            0 words
+                        </span>
+
+                    </div>
+
+                    <textarea
+                        id="jobDescription"
+                        placeholder="Paste the job description here...
+
+Example:
+
+We are looking for a Java Developer with knowledge of Java,
+Spring Boot, MySQL, REST API, JavaScript and React..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="checkButton"
+                class="check-btn"
+            >
+                Check ATS Score →
+            </button>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section
+            id="resultSection"
+            class="result-section hidden"
+        >
+
+            <div class="result-heading">
+
+                <span class="badge">
+                    ATS ANALYSIS
+                </span>
+
+                <h2>
+                    Your Resume Report
+                </h2>
+
+            </div>
+
+
+            <!-- SCORE -->
+
+            <div class="score-card">
+
+                <div class="score-circle">
+
+                    <div>
+                        <strong id="score">
+                            0
+                        </strong>
+
+                        <span>/100</span>
+                    </div>
+
+                </div>
+
+
+                <div class="score-content">
+
+                    <h2 id="scoreTitle">
+                        Resume Analysis
+                    </h2>
+
+                    <p id="scoreMessage">
+                        Your ATS report will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHECKS -->
+
+            <div class="analysis-grid">
+
+                <div class="analysis-card">
+
+                    <h3>
+                        Resume Sections
+                    </h3>
+
+                    <div id="sectionResults"></div>
+
+                </div>
+
+
+                <div class="analysis-card">
+
+                    <h3>
+                        Job Keywords
+                    </h3>
+
+                    <div id="keywordResults"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMPROVEMENTS -->
+
+            <div class="improvement-card">
+
+                <h3>
+                    💡 Suggested Improvements
+                </h3>
+
+                <ul id="improvementList"></ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="ats-checker.js"></script>
+
+</body>
+
+</html>
